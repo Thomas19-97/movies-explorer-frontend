@@ -5,7 +5,7 @@ const Profile = () => {
     return (
         <section className='profile'>
             <form className='profile__form'>
-                <h2 className='profile__title'>Привет, Виталий!</h2>
+                <h1 className='profile__title'>Привет, Виталий!</h1>
                 <div className='profile__container'>
                     <p className='profile__field-title'>Имя</p>
                     <input className='profile__field-value' defaultValue='Виталий' required placeholder='Имя'></input>

@@ -55,7 +55,7 @@
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 550px) {
     .not-found-page {
         padding-top: 330px;
         padding-bottom: 30px;

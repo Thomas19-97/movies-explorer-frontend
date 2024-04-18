@@ -54,6 +54,8 @@
      font-weight: 400;
      line-height: 16.94px;
      text-align: center;
+     background: rgba(242, 242, 242, 1);
+
  }
 
  .about-project__stage-title_type_green {
@@ -153,11 +155,11 @@
      }
 
      .about-project__stage:first-of-type {
-         width: 38%;
+         min-width: 100px;
      }
 
      .about-project__stage:last-of-type {
-         width: 70%;
+         min-width: 184px;
      }
 
      .about-project__stage-title {

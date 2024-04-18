@@ -2,7 +2,7 @@ import './Footer.css';
 const Footer = () =>{
     return (
         <footer className='footer'>
-            <h2 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h2>
+            <h1 className='footer__title'>Учебный проект Яндекс.Практикум х BeatFilm.</h1>
             <div className='footer__container'>
                 <p className='footer__copyright'>© 2024</p>
                 <nav className='footer__navigation'>

@@ -8,7 +8,7 @@ const SearchForm = () => {
             </div>
             <div className='search__filter'>
                 <label className="search__tumbler">
-                    <input type="checkbox" className="search__checkbox" placeholder='Чекбокс'/>
+                    <input type="checkbox" className="search__checkbox"/>
                     <span className="search__slider" />
                 </label>
                 <p className="search__films">Короткометражки</p>
