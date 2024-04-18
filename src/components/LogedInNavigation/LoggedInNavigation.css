@@ -1,0 +1,214 @@
+.logged-in-navigation {
+  width: 59.2%;
+}
+
+.logged-in-navigation__btn-menu {
+  display: none;
+  margin-left: auto;
+  padding: 0;
+  width: 40px;
+  height: 43px;
+  outline: none;
+  border: none;
+  background: transparent url('../../images/icon__COLOR_icon-main.svg') center center / cover no-repeat;
+  transition: ease-in-out 0.5s;
+}
+
+.logged-in-navigation__btn-menu:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+.logged-in-navigation__pic{
+  width: 11px;
+  height: 11px;
+  margin-left: 8px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: rgba(249, 249, 249, 1);
+
+
+}
+
+.logged-in-navigation__sidebar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logged-in-navigation__list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logged-in-navigation__btn-close {
+  display: none;
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  outline: none;
+  border: none;
+  background: transparent url('../../images/Group.svg') center center / 32px no-repeat;
+  align-self: flex-end;
+  transition: ease-in-out 0.5s;
+}
+
+.logged-in-navigation__btn-close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.logged-in-navigation__list {
+  display: flex;
+  padding: 0;
+  list-style: none;
+}
+
+.logged-in-navigation__list-item {
+  margin: 0 17px 0 0;
+}
+
+.logged-in-navigation__list-item_type_main {
+  display: none;
+}
+
+.logged-in-navigation__link {
+  color: #000;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+  transition: ease-in-out 0.5s;
+}
+
+.logged-in-navigation__link:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.logged-in-navigation__link_type_profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 32px;
+  margin: 0;
+  border-radius: 20px;
+  background-color: #F9F9F9;
+  font-size: 14px;
+}
+.logged-in-navigation__link_type_main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 32px;
+  margin: 0;
+  border-radius: 20px;
+  background-color: rgba(43, 224, 128, 1);
+  font-size: 14px;
+}
+.logged-in-navigation__link_main{
+  color: rgba(255, 255, 255, 1);
+
+}
+.logged-in-navigation__btn-menu_main{
+  background: transparent url('../../images/button_menu.svg') center center / cover no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .logged-in-navigation__btn-menu {
+    display: flex;
+  }
+
+  .logged-in-navigation__container {
+    display: none;
+  }
+
+  .logged-in-navigation__container_visible {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 2;
+  }
+
+  .logged-in-navigation__sidebar {
+    box-sizing: border-box;
+    width: 520px;
+    min-height: 100vh;
+    margin-left: auto;
+    flex-direction: column;
+    padding: 27px 27px 90px;
+    background-color: #fff;
+  }
+
+  .logged-in-navigation__list-container {
+    width: 100%;
+  }
+
+  .logged-in-navigation__btn-close {
+    display: flex;
+  }
+
+  .logged-in-navigation__list {
+    flex-direction: column;
+    margin: 110px auto 0;
+    align-items: center;
+  }
+
+  .logged-in-navigation__list-item {
+    margin: 0 0 24px;
+  }
+
+  .logged-in-navigation__list-item_type_main {
+    display: flex;
+  }
+
+  .logged-in-navigation__link {
+    padding: 0 0 4px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+  }
+
+  .logged-in-navigation__link_active {
+    border-bottom: 2px solid #000;
+  }
+
+  .logged-in-navigation__link_type_profile {
+    font-size: 14px;
+  }
+  .logged-in-navigation__link_type_main {
+    font-size: 14px;
+    background-color: #F9F9F9;
+  }
+  .logged-in-navigation__link_main{
+    color:#000;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .logged-in-navigation__list {
+    margin: 105px auto 0;
+  }
+
+  .logged-in-navigation__sidebar {
+    padding: 18px 18px 46px;
+  }
+
+  .logged-in-navigation__list-item {
+    margin: 0 0 20px;
+  }
+  .logged-in-navigation__btn-menu{
+    background-size: 35px;
+  }
+  .logged-in-navigation__link_active{
+    padding-bottom: 7px;
+    border-bottom:rgba(0, 0, 0, 1) 1px solid;
+
+  }
+}
