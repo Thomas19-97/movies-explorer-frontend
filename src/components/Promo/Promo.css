@@ -41,6 +41,8 @@
     font-size: 12px;
     line-height: 16px;
     transition: ease-in-out 0.5s;
+    border-radius: 3px;
+    text-decoration: none;
 }
 
 .promo__link:hover {

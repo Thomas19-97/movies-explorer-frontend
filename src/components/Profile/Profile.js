@@ -8,9 +8,9 @@ const Profile = () => {
                 <h2 className='profile__title'>Привет, Виталий!</h2>
                 <div className='profile__container'>
                     <p className='profile__field-title'>Имя</p>
-                    <input className='profile__field-value' defaultValue='Виталий' required></input>
+                    <input className='profile__field-value' defaultValue='Виталий' required placeholder='Имя'></input>
                     <p className='profile__field-title'>E-mail</p>
-                    <input className='profile__field-value' defaultValue='pochta@yandex.ru' required></input>
+                    <input className='profile__field-value' defaultValue='pochta@yandex.ru' required placeholder='Email'></input>
                 </div>
                 <Link to="/profile" className="profile__button">Редактировать</Link>
                 <Link to="/" className="profile__link">Выйти из аккаунта</Link>

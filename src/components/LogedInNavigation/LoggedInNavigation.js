@@ -21,14 +21,14 @@ const LoggedInNavigation = () => {
                 <Link to="/" className="logged-in-navigation__link">Главная</Link>
               </li>
               <li className="logged-in-navigation__list-item">
-                <NavLink to="/movies"  className={`logged-in-navigation__link ${pathname ==='/' ? 'logged-in-navigation__link_main' : ''}`} activeClassName="logged-in-navigation__link_active">Фильмы</NavLink>
+                <NavLink to="/movies"  className={`logged-in-navigation__link ${pathname ==='/' ? 'logged-in-navigation__link_main' : ''}`} >Фильмы</NavLink>
               </li>
               <li className="logged-in-navigation__list-item">
-                <NavLink to="/saved-movies" className={`logged-in-navigation__link ${pathname ==='/' ? 'logged-in-navigation__link_main' : ''}`} activeClassName="logged-in-navigation__link_active">Сохранённые фильмы</NavLink>
+                <NavLink to="/saved-movies" className={`logged-in-navigation__link ${pathname ==='/' ? 'logged-in-navigation__link_main' : ''}`} >Сохранённые фильмы</NavLink>
               </li>
             </ul>
           </div>
-          <NavLink to="/profile" className={`logged-in-navigation__link  ${pathname==='/' ? 'logged-in-navigation__link_type_main' : 'logged-in-navigation__link_type_profile'}`}  activeClassName="logged-in-navigation__link_active">Аккаунт
+          <NavLink to="/profile" className={`logged-in-navigation__link  ${pathname==='/' ? 'logged-in-navigation__link_type_main' : 'logged-in-navigation__link_type_profile'}`}  >Аккаунт
           <img className='logged-in-navigation__pic' src={Acc} alt='Изображение'></img>
           </NavLink>
 

@@ -8,7 +8,7 @@ import LoggedInNavigation from '../LogedInNavigation/LoggedInNavigation';
 const Header = ({ loggedIn }) => {
     const { pathname } = useLocation();
     return (
-        <header className={`header ${pathname ==='/' ? 'header__auth' : ''}`}>
+        <header className={`header ${pathname ==='/' ? 'header-auth' : ''}`}>
             <Link to='/' className='header__link'>
                 <img className="header__logo" src={logo} alt="Логотип Movies Explorer"></img>
             </Link>
