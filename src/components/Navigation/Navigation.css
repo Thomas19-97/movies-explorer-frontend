@@ -1,0 +1,44 @@
+  .navigation__list {
+    display: flex;
+    margin: 0 auto;
+    padding: 0%;
+    list-style: none;
+  }
+
+  .navigation__link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    text-decoration: none;
+  }
+
+  .navigation__link:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  .navigation__link_signup {
+    color: #fff;
+    padding-right: 30px;
+  }
+
+  .navigation__link_signin {
+    color: rgba(0, 0, 0, 1);
+    background: rgba(43, 224, 128, 1);
+    padding: 8px 20px;
+    border-radius: 3px;
+  }
+
+  @media screen and (max-width: 550px) {
+    .navigation__link {
+      font-size: 10px;
+    }
+
+    .navigation__link_signin {
+      padding: 5px 12px
+    }
+
+    .navigation__link_signup {
+      padding-right: 14px;
+    }
+  }
