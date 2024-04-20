@@ -45,7 +45,7 @@
 }
 
 .card__button_active {
-  background: #f9f9f9 url(../../images/icon-saved-active.svg) center no-repeat;
+  background: #f9f9f9 url(../../images/Active_like.svg) center no-repeat;
 }
 
 .card__button_delete {

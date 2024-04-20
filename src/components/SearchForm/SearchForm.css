@@ -105,6 +105,26 @@
 .search__checkbox:checked+.search__slider::before {
     transform: translateX(20px);
 }
+.search__error {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #EE3465;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.search__error_active {
+    visibility: visible;
+}
 
 @media screen and (max-width: 768px) {
     .search {

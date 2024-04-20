@@ -8,7 +8,7 @@ const NotFoundPage = () =>{
                 <h1 className='not-found-page__title'>404</h1>
                 <h2 className='not-found-page__subtitle'>Страница не найдена</h2>
             </div>
-            <Link onClick={() => navigate(-1)} className="not-found-page__link">Назад</Link>
+            <Link onClick={() => navigate(-2)} className="not-found-page__link">Назад</Link>
         </div>
     )
 }
