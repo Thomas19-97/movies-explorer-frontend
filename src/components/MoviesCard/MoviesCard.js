@@ -1,36 +1,62 @@
-import './MoviesCard.css';
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import './MoviesCard.css';
+import { CARDS_IMAGE_BASE_URL } from '../../config/config'
 
-const MoviesCard = ({ card }) => {
-  const [favorite, setFavorite] = React.useState(false);
+function MoviesCard({ card, savedCard, onSaveMovie, onDeleteMovie, isSavedFilms, savedMovies }) {
+  const cardSaveButtonClassName = (
+    `card__button card__button${savedCard ? '_active' : '_inactive'}`
+  );
 
-  function handleFavoriteToogle() {
-    setFavorite(!favorite);
+  // меняем отображение карточки на странице фильмов
+  function handleCardClick() {
+    if (savedCard) {
+      onDeleteMovie(savedMovies.filter((movie) => movie.movieId === card.id)[0]);
+    } else {
+      onSaveMovie(card);
+    }
   }
 
-  const { pathname } = useLocation();
+  // удаляем карточку на странице сохраненных фильмов
+  function handleCardDelete() {
+    onDeleteMovie(card);
+  }
+
+  //конвертируем длительность фильма
+  function convertDuration(duration) {
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
+    return `${hours}ч ${minutes}м`;
+  }
 
   return (
     <li className="card">
-      <img src={card.image} alt={card.title} className="card__image"></img>
-      <div className="card__element">
-        <p className="card__title">{card.title}</p>
+      <a className="card__image-content" href={card.trailerLink} target="_blank" rel="noreferrer">
+        <img className="card__image" src={isSavedFilms ? card.image : `${CARDS_IMAGE_BASE_URL}/${card.image.url}`} alt={card.nameRU} />
+      </a>
+      <div className="card__element" id={card._id}>
+      <p className="card__title">{card.nameRU}</p>
         <div className="card__buttons">
-          {pathname=== '/saved-movies' ? (
-            <button type="button" className="card__button card__button_delete" />
+          {isSavedFilms ? (
+            <button
+              onClick={handleCardDelete}
+              className="card__button card__button_delete"
+              type="button"
+              aria-label="Кнопка для удаления фильма"
+            ></button>
           ) : (
             <button
+              className={cardSaveButtonClassName}
               type="button"
-              className={`card__button card__button${favorite ? '_active' : '_inactive'}`}
-              onClick={handleFavoriteToogle}
-            />
+              aria-label="Кнопка для сохранения и удаления фильма"
+              onClick={handleCardClick}
+            ></button>
           )}
         </div>
       </div>
-      <p className="card__duration">{card.duration}</p>
+      <p className="card__duration">{convertDuration(card.duration)}</p>
     </li>
   );
-};
+}
+
 
 export default MoviesCard;
